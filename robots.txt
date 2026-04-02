@@ -1,6 +1,3 @@
-# robots.txt for oxyclub.site
-
 User-agent: *
-Disallow:
-
+Allow: /
 Sitemap: https://oxyclub.site/sitemap.xml
