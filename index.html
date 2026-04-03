@@ -32,7 +32,7 @@
             top: 0;
             z-index: 1000;
             border-radius: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 0px; /* Adjusted for marquee */
         }
 
         .header-left { display: flex; flex-direction: column; }
@@ -42,6 +42,17 @@
         .header-wa { font-size: 12px; color: #00d1b2; text-decoration: none; font-weight: bold; }
         .header-right img { height: 35px; border-radius: 4px; }
         @keyframes blinker { 50% { opacity: 0; } }
+
+        /* Marquee Styling */
+        .news-marquee {
+            background: #001f3f;
+            color: #00ff88;
+            padding: 7px 0;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0,209,178,0.2);
+        }
 
         /* --- Card Container --- */
         .card-container {
@@ -81,8 +92,7 @@
             gap: 8px;
         }
 
-        .rating-num { font-size: 18px; font-weight: 700; color: #fff; }
-        .stars { color: #f7b731; font-size: 14px; }
+        .rating-num { font-size: 15px; font-weight: 700; color: #fff; }
 
         .promo-badge {
             background-color: #f61b36;
@@ -105,7 +115,6 @@
         .det-label { color: #aaa; font-size: 10px; text-transform: uppercase; }
         .det-val { color: #fff; font-size: 15px; font-weight: 700; display: block; margin-top: 2px; }
 
-        /* Gradient Button */
         .reg-btn {
             display: block;
             background: linear-gradient(90deg, #f7df1e, #00d2ff);
@@ -140,6 +149,27 @@
             animation: pulse 2s infinite;
         }
 
+        /* Footer Styling */
+        .site-footer {
+            text-align: center;
+            padding: 30px 10px;
+            margin-top: 20px;
+            background: #06121f;
+            border-top: 2px solid #00d1b2;
+            border-radius: 15px 15px 0 0;
+        }
+        .footer-title { color: #00d1b2; font-size: 20px; margin-bottom: 10px; }
+        .footer-contact { font-size: 15px; color: #fff; margin-bottom: 15px; }
+        .age-warning {
+            display: inline-block;
+            border: 1px solid #ff4444;
+            color: #ff4444;
+            padding: 3px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
         @keyframes pulse {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
@@ -163,6 +193,12 @@
         </div>
     </header>
 
+    <div class="news-marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            🔥 Join BDT20, GameOn24, Goal90 – Oxy Club ✅ এক্টিভ থাকুন সব সাইটে একই ক্লাব 🔥 দ্রুত পেমেন্ট ও ২৪ ঘন্টা কাস্টমার সাপোর্ট 🔥
+        </marquee>
+    </div>
+
     <div class="card-container">
 
         <article class="bet-card">
@@ -172,7 +208,6 @@
                 </div>
                 <div class="rating-box">
                     <span class="rating-num">Oxy Club join</span>
-                    
                 </div>
             </div>
             <span class="promo-badge">Sponsor: Oxy11</span>
@@ -191,7 +226,6 @@
                 </div>
                 <div class="rating-box">
                     <span class="rating-num">Oxy Club join</span>
-                    
                 </div>
             </div>
             <span class="promo-badge">Sponsor: Oxy11</span>
@@ -210,7 +244,6 @@
                 </div>
                 <div class="rating-box">
                     <span class="rating-num">Oxy Club join</span>
-                    
                 </div>
             </div>
             <span class="promo-badge">Sponsor: Oxy11</span>
@@ -223,6 +256,12 @@
         </article>
 
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-title">Oxy Club join</div>
+        <div class="footer-contact">01826444505 imo Whatsapp</div>
+        <div class="age-warning">⚠️ make sure you're 28+</div>
+    </footer>
 
     <a href="https://wa.me/8801826444505" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
