@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash AI - OxyClub</title>
+    
+    <style>
+        /* --- CSS অংশ --- */
+        #ak-chat-icon {
+            position: fixed; bottom: 20px; right: 20px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            width: 55px; height: 55px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 10000;
+        }
+        #ak-badge { position: absolute; top: -2px; right: 2px; background: red; color: white; border-radius: 50%; padding: 1px 6px; font-size: 10px; }
+        
+        #ak-chat-box {
+            position: fixed; bottom: 85px; right: 20px;
+            width: 300px; height: 420px; background: #fff; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: none; flex-direction: column; overflow: hidden; z-index: 10000;
+        }
+
+        .ak-header { background: #6e8efb; color: #fff; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; }
+        .ak-profile { display: flex; align-items: center; gap: 10px; }
+        .ak-img { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #fff; object-fit: cover; }
+        .ak-online { position: absolute; bottom: 0; right: 0; width: 8px; height: 8px; background: #2ecc71; border-radius: 50%; border: 1px solid #fff; }
+        .ak-name { font-weight: bold; font-size: 14px; display: block; }
+        .ak-status { font-size: 10px; opacity: 0.8; }
+        .ak-close { background: none; border: none; color: #fff; font-size: 20px; cursor: pointer; }
+
+        #ak-display { flex: 1; padding: 12px; overflow-y: auto; background: #f9f9f9; display: flex; flex-direction: column; gap: 8px; }
+        .msg { padding: 8px 12px; border-radius: 12px; font-size: 13px; max-width: 85%; line-height: 1.4; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .user { background: #6e8efb; color: #fff; align-self: flex-end; border-bottom-right-radius: 2px; }
+        .ai { background: #eee; color: #333; align-self: flex-start; border-bottom-left-radius: 2px; }
+
+        .ak-footer { display: flex; padding: 8px 12px; border-top: 1px solid #eee; background: #fff; }
+        #ak-input { flex: 1; border: none; background: #f1f3f5; padding: 8px; border-radius: 8px; outline: none; font-size: 13px; }
+        .ak-footer button { background: none; border: none; color: #6e8efb; font-size: 18px; margin-left: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div id="ak-chat-icon" onclick="toggleAkChat()">
+        <span id="ak-badge">1</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/8943/8943377.png" width="28" alt="AI">
+    </div>
+
+    <div id="ak-chat-box">
+        <div class="ak-header">
+            <div class="ak-profile">
+                <div style="position:relative">
+                    <img src="https://writestylesonline.com/wp-content/uploads/2016/08/Follow-These-Steps-for-a-Flawless-Professional-Profile-Picture-1024x1024.jpg" class="ak-img">
+                    <div class="ak-online"></div>
+                </div>
+                <div class="ak-info">
+                    <span class="ak-name">আকাশ</span>
+                    <span class="ak-status">Online</span>
+                </div>
+            </div>
+            <button class="ak-close" onclick="toggleAkChat()">×</button>
+        </div>
+
+        <div id="ak-display">
+            <div class="msg ai">হ্যালো! আমি আকাশ। আপনার কী সাহায্য প্রয়োজন?</div>
+        </div>
+
+        <div class="ak-footer">
+            <input type="text" id="ak-input" placeholder="প্রশ্ন লিখুন..." onkeypress="if(event.key==='Enter') sendAkMsg()">
+            <button onclick="sendAkMsg()">➤</button>
+        </div>
+    </div>
+
+    <script>
+        const API_KEY = "YOUR_GEMINI_API_KEY"; // এখানে আপনার Gemini API Key বসান
+
+        function toggleAkChat() {
+            const box = document.getElementById('ak-chat-box');
+            box.style.display = (box.style.display === 'flex') ? 'none' : 'flex';
+            document.getElementById('ak-badge').style.display = 'none';
+        }
+
+        async function sendAkMsg() {
+            const input = document.getElementById('ak-input');
+            const logs = document.getElementById('ak-display');
+            const text = input.value.trim();
+            if(!text) return;
+
+            // ইউজারের মেসেজ যোগ করা
+            logs.innerHTML += `<div class="msg user">${text}</div>`;
+            input.value = "";
+            logs.scrollTop = logs.scrollHeight;
+
+            // লোডিং দেখানো
+            const loadId = "ld-" + Date.now();
+            logs.innerHTML += `<div class="msg ai" id="${loadId}">আকাশ ভাবছে...</div>`;
+            logs.scrollTop = logs.scrollHeight;
+
+            try {
+                // AI-কে ইনস্ট্রাকশন দেওয়া
+                const prompt = `তুমি আকাশের প্রিমিয়াম এআই। 
+                ১. সংক্ষেপে উত্তর দাও। 
+                ২. ইউজারকে একাউন্ট করতে এবং ইমো/হোয়াটসঅ্যাপ/টেলিগ্রামে যোগাযোগ করতে উৎসাহিত করো। 
+                প্রশ্ন: ${text}`;
+
+                const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+                });
+                
+                const data = await res.json();
+                const aiReply = data.candidates[0].content.parts[0].text;
+                
+                // উত্তর আপডেট করা
+                document.getElementById(loadId).innerText = aiReply;
+            } catch(e) {
+                document.getElementById(loadId).innerText = "দুঃখিত, কানেকশনে সমস্যা হচ্ছে।";
+            }
+            logs.scrollTop = logs.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>
