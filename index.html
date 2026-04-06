@@ -9,7 +9,7 @@
     <meta name="keywords" content="bdt20, gameon24, goal90, online bet, oxy Club, bd site, betting site bangladesh">
     
     <meta property="og:title" content="Oxy Club - Best BD Betting Sites">
-    <meta property="og:description" content="Join top betting sites in Bangladesh like Goal90, BDT20, Man99, Oxy Club, Gameon24 Oxy Club.">
+    <meta property="og:description" content="Join top betting sites in Bangladesh like Goal90, BDT20, Man99, Oxy Club, Gameon24 Oxy Club 01826444505.">
     <meta property="og:url" content="https://oxyclub.site">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://oxyclub.site/oxy1.png">
@@ -27,7 +27,7 @@
             color: #ffffff;
         }
 
-        /* --- Updated Pro Header with Profile --- */
+        /* --- Premium Header with Profile & Live Dot --- */
         .pro-header {
             display: flex;
             justify-content: space-between;
@@ -40,7 +40,7 @@
             z-index: 1000;
             border-radius: 12px;
             margin-bottom: 0px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
         .header-left {
@@ -49,14 +49,17 @@
             gap: 12px;
         }
 
-        /* Profile Image Container */
-        .profile-container {
+        /* Profile Picture Style */
+        .profile-wrapper {
             position: relative;
-            width: 45px;
-            height: 45px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .profile-container img {
+        .profile-wrapper img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
@@ -64,51 +67,51 @@
             object-fit: cover;
         }
 
-        /* Live Blinking Dot on Profile */
-        .live-dot {
+        /* Fixed Live Dot Position (Outside on Corner) */
+        .live-status-dot {
             position: absolute;
-            bottom: 0px;
-            right: 1px;
-            width: 10px;
-            height: 10px;
+            bottom: 2px;
+            right: -2px; /* ডটটি ছবির একটু বাইরে রাখার জন্য */
+            width: 14px;
+            height: 14px;
             background: #00ff88;
-            border: 2px solid #112b44;
+            border: 2px solid #112b44; /* বর্ডার যাতে ছবির সাথে মিশে না যায় */
             border-radius: 50%;
-            animation: pulse-green 1.5s infinite;
+            z-index: 10;
+            animation: pulse-dot 1.5s infinite;
         }
 
-        @keyframes pulse-green {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(0, 255, 136, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+        @keyframes pulse-dot {
+            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(0, 255, 136, 0); }
+            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
         }
 
-        .status-info {
+        .status-details {
             display: flex;
             flex-direction: column;
         }
 
-        .op-text {
+        .op-title {
             font-size: 13px;
             font-weight: 700;
             color: #00ff88;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        .header-wa {
+        .wa-link-top {
             font-size: 12px;
-            color: #fff;
+            color: #00d1b2;
             text-decoration: none;
-            opacity: 0.9;
+            font-weight: bold;
         }
 
         .header-right img {
             height: 38px;
-            border-radius: 6px;
+            border-radius: 5px;
         }
 
-        /* Marquee Styling */
+        /* Marquee */
         .news-marquee {
             background: #001f3f;
             color: #00ff88;
@@ -119,9 +122,8 @@
             border-bottom: 1px solid rgba(0,209,178,0.2);
         }
 
-        /* --- Card Container & Styles --- */
+        /* Cards Styling */
         .card-container { max-width: 480px; margin: 0 auto; padding-bottom: 20px; }
-
         .bet-card {
             background-color: #112b44;
             border-radius: 20px;
@@ -130,17 +132,14 @@
             border: 1px solid rgba(255,255,255,0.05);
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
-
         .card-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
         .brand-logo img { height: 40px; background: #fff; padding: 5px 10px; border-radius: 10px; object-fit: contain; }
         .rating-box { background-color: #f61b36; border-radius: 6px; padding: 5px 15px; }
         .rating-num { font-size: 14px; font-weight: 700; color: #fff; }
         .promo-badge { color: #aaa; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 15px; }
-
         .details-row { display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; margin-bottom: 15px; }
         .det-label { color: #aaa; font-size: 10px; text-transform: uppercase; }
         .det-val { color: #fff; font-size: 15px; font-weight: 700; display: block; margin-top: 2px; }
-
         .reg-btn {
             display: block;
             background: linear-gradient(90deg, #f7df1e, #00d2ff);
@@ -151,16 +150,23 @@
             text-align: center;
             font-weight: 700;
             font-size: 14px;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
-        .reg-btn:hover { transform: scale(1.02); }
 
-        /* --- Footer & Float --- */
-        .site-footer { text-align: center; padding: 30px 10px; margin-top: 20px; background: #06121f; border-top: 2px solid #00d1b2; border-radius: 15px 15px 0 0; }
+        /* Interlinking Section */
+        .link-box {
+            text-align: center;
+            padding: 15px;
+            background: #112b44;
+            border: 1px solid #00d1b2;
+            margin: 15px 0;
+            border-radius: 15px;
+        }
+
+        /* Footer & Floating Button */
+        .site-footer { text-align: center; padding: 30px 10px; background: #06121f; border-top: 2px solid #00d1b2; border-radius: 15px 15px 0 0; }
         .footer-title { color: #00d1b2; font-size: 20px; margin-bottom: 10px; }
-        .footer-contact { font-size: 15px; color: #fff; margin-bottom: 15px; }
         .age-warning { border: 1px solid #ff4444; color: #ff4444; padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; }
-
         .wa-float {
             position: fixed; width: 60px; height: 60px; bottom: 30px; right: 20px;
             background-color: #25d366; color: #FFF; border-radius: 50px;
@@ -168,7 +174,6 @@
             font-size: 35px; box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
             z-index: 1000; text-decoration: none; animation: pulse 2s infinite;
         }
-
         @keyframes pulse {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
@@ -180,12 +185,13 @@
 
     <header class="pro-header">
         <div class="header-left">
-            <div class="profile-container">
-                <img src="oxy1.png" alt="Operator"> <div class="live-dot"></div>
+            <div class="profile-wrapper">
+                <img src="oxy1.png" alt="Operator">
+                <div class="live-status-dot"></div>
             </div>
-            <div class="status-info">
-                <span class="op-text">Operator Online</span>
-                <a href="https://wa.me/8801826444505" class="header-wa">
+            <div class="status-details">
+                <span class="op-title">Operator Online</span>
+                <a href="https://wa.me/8801826444505" class="wa-link-top">
                     <i class="fab fa-whatsapp"></i> 01826444505
                 </a>
             </div>
@@ -245,12 +251,16 @@
         </article>
     </div>
 
-    <div style="text-align:center; padding:15px; background:#112b44; border-top:2px solid #00d1b2; margin: 10px; border-radius: 12px;">
-        <p style="font-size:14px; color:#fff; margin-bottom: 10px;">আমাদের নতুন অফিসিয়াল সাইট:</p>
-        <a href="https://bdworld.site" target="_blank" 
-           style="background: #00ff88; color: #000; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-weight: 700; display: inline-block;">
-           Visit BDWorld.site
-        </a>
+    <div class="card-container">
+        <div class="link-box">
+            <p style="font-size:15px; color:#00ff88; margin-bottom: 10px; font-weight: bold;">
+                আমাদের নতুন অফিসিয়াল সাইট ভিজিট করুন:
+            </p>
+            <a href="https://bdworld.site" target="_blank" 
+               style="background: linear-gradient(90deg, #00d2ff, #3a7bd5); color: #fff; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-block;">
+               Visit BDWorld.site
+            </a>
+        </div>
     </div>
 
     <footer class="site-footer">
