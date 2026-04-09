@@ -1,347 +1,547 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oxy Club | Goal90, Bdt20, Gameon24 Trusted Platform বাংলাদেশ</title>
-<meta name="description" content="Oxy Club এ Goal90, Gameon24, Bdt20 ও Bdworld এর মতো জনপ্রিয় প্ল্যাটফর্ম একসাথে পান। দ্রুত অ্যাক্সেস, নিরাপদ অভিজ্ঞতা এবং সহজ ব্যবহার। এখনই যোগ দিন।">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://oxyclub.site/" />
-<meta property="og:title" content="Oxy Club - বাংলাদেশের জনপ্রিয় অনলাইন প্ল্যাটফর্ম">
-<meta property="og:description" content="Goal90, Gameon24, Bdt20, Bdworld এবং Oxy Club সহ সব ট্রেন্ডিং প্ল্যাটফর্ম একসাথে এক জায়গায়। সহজ ও দ্রুত অ্যাক্সেস এখনই পান।">
-<meta property="og:url" content="https://oxyclub.site/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://oxyclub.site/oxy1.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oxy Club | Goal90, Bdt20, Gameon24 Trusted Platform বাংলাদেশ</title>
+  <meta name="description" content="Oxy Club এ Goal90, Gameon24, Bdt20 ও Bdworld এর মতো জনপ্রিয় প্ল্যাটফর্ম একসাথে পান।">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://oxyclub.site/" />
+  <meta property="og:title" content="Oxy Club - বাংলাদেশের জনপ্রিয় অনলাইন প্ল্যাটফর্ম">
+  <meta property="og:url" content="https://oxyclub.site/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://oxyclub.site/oxy1.png">
+  <link rel="icon" href="https://oxyclub.site/oxy1.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Baloo+Da+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Twitter Card (bonus SEO + share boost) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Oxy Club - Trusted Online Platform বাংলাদেশ">
-<meta name="twitter:description" content="Goal90, Gameon24, Bdt20 সহ জনপ্রিয় প্ল্যাটফর্ম একসাথে। এখনই যোগ দিন।">
-<meta name="twitter:image" content="https://oxyclub.site/oxy1.png">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    :root {
+      --bg:       #040810;
+      --bg2:      #080e1c;
+      --surface:  #0c1628;
+      --surf2:    #0f1d35;
+      --teal:     #00d1b2;
+      --teal2:    #00fff0;
+      --green:    #00ff88;
+      --accent:   #f7df1e;
+      --red:      #ff3b5c;
+      --border:   rgba(0,209,178,0.15);
+      --border2:  rgba(0,209,178,0.3);
+      --text:     #e0eaf8;
+      --muted:    #6b7f9e;
+      --r: cubic-bezier(.22,.9,.4,1.1);
+    }
 
-<link rel="icon" href="https://oxyclub.site/oxy1.png" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            padding: 10px;
-            background-color: #030810;
-            font-family: 'Roboto', sans-serif;
-            color: #ffffff;
-        }
+    html { scroll-behavior: smooth; }
 
-        /* --- Premium Header with Profile & Live Dot --- */
-        .pro-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 15px;
-            background: #112b44;
-            border-bottom: 2px solid #00d1b2;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-radius: 12px;
-            margin-bottom: 0px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-        }
+    body {
+      background: var(--bg);
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    /* BG pattern */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,209,178,.08), transparent),
+        radial-gradient(ellipse 50% 40% at 90% 80%, rgba(0,255,136,.05), transparent);
+    }
 
-        /* Profile Picture Style */
-        .profile-wrapper {
-            position: relative;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 8px; }
 
-        .profile-wrapper img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid #00d1b2;
-            object-fit: cover;
-        }
+    /* ── HEADER ── */
+    .pro-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: rgba(8,14,28,0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      margin: 10px 10px 0;
+      position: sticky;
+      top: 8px;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0,0,0,.5), 0 0 0 1px rgba(0,209,178,.08);
+    }
 
-        /* Fixed Live Dot Position (Outside on Corner) */
-        .live-status-dot {
-            position: absolute;
-            bottom: 3px;
-            right: -7px; /* ডটটি ছবির একটু বাইরে রাখার জন্য */
-            width: 14px;
-            height: 14px;
-            background: #00ff88;
-            border: 2px solid #112b44; /* বর্ডার যাতে ছবির সাথে মিশে না যায় */
-            border-radius: 50%;
-            z-index: 10;
-            animation: pulse-dot 1.5s infinite;
-        }
+    .header-left { display: flex; align-items: center; gap: 13px; }
 
-        @keyframes pulse-dot {
-            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(0, 255, 136, 0); }
-            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
-        }
+    .profile-wrapper {
+      position: relative;
+      width: 46px; height: 46px;
+      flex-shrink: 0;
+    }
+    .profile-wrapper img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      border: 2px solid var(--teal);
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(0,209,178,.35);
+    }
+    .live-status-dot {
+      position: absolute;
+      bottom: 1px; right: -4px;
+      width: 13px; height: 13px;
+      background: var(--green);
+      border: 2px solid var(--bg2);
+      border-radius: 50%;
+      animation: pulse-dot 1.6s infinite;
+    }
+    @keyframes pulse-dot {
+      0%   { transform:scale(.9); box-shadow:0 0 0 0 rgba(0,255,136,.7); }
+      70%  { transform:scale(1.15); box-shadow:0 0 0 7px rgba(0,255,136,0); }
+      100% { transform:scale(.9); box-shadow:0 0 0 0 rgba(0,255,136,0); }
+    }
 
-        .status-details {
-            display: flex;
-            flex-direction: column;
-        }
+    .status-details { display:flex; flex-direction:column; gap:2px; }
+    .op-title {
+      font-size: 9px; font-weight: 700;
+      letter-spacing: .15em; color: var(--green);
+      text-transform: uppercase;
+    }
+    .wa-link-top {
+      font-size: 13px; color: var(--teal);
+      text-decoration: none; font-weight: 700;
+      display: flex; align-items: center; gap: 5px;
+      transition: color .2s;
+    }
+    .wa-link-top:hover { color: var(--teal2); }
 
-        .op-title {
-            font-size: 10px;
-            font-weight: 500;
-            color: #00ff88;
-            text-transform: uppercase;
-        }
+    .header-right img {
+      height: 36px; border-radius: 8px;
+      filter: drop-shadow(0 0 8px rgba(0,209,178,.3));
+    }
 
-        .wa-link-top {
-            font-size: 12px;
-            color: #00d1b2;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    /* ── MARQUEE ── */
+    .news-marquee {
+      background: linear-gradient(90deg, rgba(0,209,178,.08), rgba(0,255,136,.06), rgba(0,209,178,.08));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 0;
+      font-size: 13px; font-weight: 600;
+      color: var(--green);
+      margin: 10px 0 0;
+      letter-spacing: .03em;
+    }
 
-        .header-right img {
-            height: 38px;
-            border-radius: 5px;
-        }
+    /* ── HERO BANNER ── */
+    .hero-banner {
+      text-align: center;
+      padding: 28px 16px 20px;
+      position: relative; z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 16px; border-radius: 60px;
+      background: rgba(0,209,178,.1); border: 1px solid var(--border2);
+      font-size: 10px; letter-spacing: .18em; font-weight: 700;
+      color: var(--teal); margin-bottom: 14px; text-transform: uppercase;
+    }
+    .hero-badge span { width:5px; height:5px; background:var(--teal); border-radius:50%; display:inline-block; animation: pulse-dot 1.6s infinite; }
+    .hero-banner h1 {
+      font-size: clamp(1.6rem,6vw,2.4rem);
+      font-weight: 800; line-height: 1.2;
+      background: linear-gradient(135deg, #fff 30%, var(--teal), var(--teal2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      margin-bottom: 8px;
+    }
+    .hero-banner p {
+      font-size: .85rem; color: var(--muted);
+      max-width: 320px; margin: 0 auto;
+      line-height: 1.6;
+    }
 
-        /* Marquee */
-        .news-marquee {
-            background: #001f3f;
-            color: #00ff88;
-            padding: 6px 0;
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            border-bottom: 1px solid rgba(0,209,178,0.2);
-        }
+    /* ── CARDS ── */
+    .card-container { max-width: 500px; margin: 0 auto; padding: 0 10px 20px; position:relative; z-index:1; }
 
-        /* Cards Styling */
-        .card-container { max-width: 480px; margin: 0 auto; padding-bottom: 20px; }
-        .bet-card {
-            background-color: #112b44;
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(255,255,255,0.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        }
-        .card-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .brand-logo img { height: 40px; background: #fff; padding: 5px 10px; border-radius: 10px; object-fit: contain; }
-        .rating-box { background-color: #f61b36; border-radius: 6px; padding: 5px 15px; }
-        .rating-num { font-size: 14px; font-weight: 700; color: #fff; }
-        .promo-badge { color: #aaa; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 15px; }
-        .details-row { display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; margin-bottom: 15px; }
-        .det-label { color: #aaa; font-size: 10px; text-transform: uppercase; }
-        .det-val { color: #fff; font-size: 15px; font-weight: 700; display: block; margin-top: 2px; }
-        .reg-btn {
-            display: block;
-            background: linear-gradient(90deg, #f7df1e, #00d2ff);
-            color: #000;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 12px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 14px;
-            transition: 0.3s ease;
-        }
+    .bet-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 20px;
+      margin-bottom: 14px;
+      position: relative; overflow: hidden;
+      transition: all .35s var(--r);
+      box-shadow: 0 8px 28px rgba(0,0,0,.35);
+    }
+    .bet-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--teal), transparent);
+      opacity: 0; transition: .3s;
+    }
+    .bet-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border2);
+      background: var(--surf2);
+      box-shadow: 0 16px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(0,209,178,.12);
+    }
+    .bet-card:hover::before { opacity: 1; }
 
-        /* Interlinking Section */
-        .link-box {
-            text-align: center;
-            padding: 15px;
-            background: #112b44;
-            border: 1px solid #00d1b2;
-            margin: 15px 0;
-            border-radius: 15px;
-        }
+    /* card glow number */
+    .card-glow-num {
+      position: absolute; top: 12px; right: 18px;
+      font-size: 3.5rem; font-weight: 800; line-height: 1;
+      color: rgba(0,209,178,.05); letter-spacing: -.04em;
+      pointer-events: none;
+    }
 
-        
-/* আগের CSS সঙ্গে মিলিয়ে adjust করতে পারো */
-a.site-button {
-    background:#28a745;
-    color:white;
-    padding:8px 15px;
-    border-radius:6px;
-    text-decoration:none;
-    display:inline-block;
-    transition:0.3s;
-}
-a.site-button:hover {
-    background:#1e7e34;
-    transform:scale(1.05);
-}
-@media screen and (max-width:600px){
-    table, thead, tbody, th, td, tr { display:block; }
-    th { display:none; }
-    td { text-align:right; padding-left:50%; position:relative; border:none; border-bottom:1px solid #ddd; }
-    td::before { content: attr(data-label); position:absolute; left:0; width:50%; padding-left:10px; font-weight:bold; text-align:left; }
-    a.site-button { padding:6px 12px; font-size:14px; }
-}
+    .card-header-row {
+      display: flex; justify-content: space-between;
+      align-items: center; margin-bottom: 14px;
+    }
+    .brand-logo img {
+      height: 38px;
+      background: #fff; padding: 5px 10px;
+      border-radius: 10px; object-fit: contain;
+    }
+    .rating-box {
+      background: linear-gradient(135deg, var(--teal), #0098a0);
+      border-radius: 8px; padding: 5px 14px;
+      font-size: 11px; font-weight: 700; color: #fff;
+      letter-spacing: .04em;
+    }
 
+    .promo-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(247,223,30,.08);
+      border: 1px solid rgba(247,223,30,.25);
+      color: var(--accent);
+      font-size: 10px; font-weight: 700;
+      padding: 3px 12px; border-radius: 60px;
+      margin-bottom: 14px; letter-spacing: .1em;
+      text-transform: uppercase;
+    }
 
-        /* Footer & Floating Button */
-        .site-footer { text-align: center; padding: 30px 10px; background: #06121f; border-top: 2px solid #00d1b2; border-radius: 15px 15px 0 0; }
-        .footer-title { color: #00d1b2; font-size: 20px; margin-bottom: 10px; }
-        .age-warning { border: 1px solid #ff4444; color: #ff4444; padding: 3px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; }
-        .wa-float {
-            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 20px;
-            background-color: #25d366; color: #FFF; border-radius: 50px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 35px; box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
-            z-index: 1000; text-decoration: none; animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-    </style>
+    .details-row {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      text-align: center; margin-bottom: 16px;
+      background: rgba(0,0,0,.2);
+      border-radius: 14px; padding: 12px 6px;
+      border: 1px solid rgba(255,255,255,.04);
+    }
+    .det-item { display: flex; flex-direction: column; gap: 4px; }
+    .det-label {
+      color: var(--muted); font-size: 9px;
+      text-transform: uppercase; letter-spacing: .12em;
+    }
+    .det-val { color: #fff; font-size: 14px; font-weight: 700; }
+    .details-row .det-item + .det-item {
+      border-left: 1px solid rgba(255,255,255,.06);
+    }
+
+    .reg-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: linear-gradient(135deg, var(--teal), #00a896);
+      color: #031a14;
+      text-decoration: none;
+      padding: 13px;
+      border-radius: 14px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .04em;
+      transition: all .3s var(--r);
+      box-shadow: 0 6px 20px rgba(0,209,178,.25);
+    }
+    .reg-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0,209,178,.4);
+      background: linear-gradient(135deg, var(--teal2), var(--teal));
+    }
+    .reg-btn i { font-size: 1rem; }
+
+    /* ── SITES TABLE ── */
+    .sites-section {
+      max-width: 500px; margin: 0 auto 16px;
+      padding: 0 10px; position: relative; z-index:1;
+    }
+    .sites-title {
+      font-size: .8rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--teal); font-weight: 700;
+      text-align: center; margin-bottom: 12px;
+    }
+    .sites-grid {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden;
+    }
+    .sites-grid table {
+      width: 100%; border-collapse: collapse;
+    }
+    .sites-grid thead th {
+      background: rgba(0,209,178,.08);
+      padding: 10px 14px;
+      font-size: 10px; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      font-weight: 700; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .sites-grid tbody tr { border-bottom: 1px solid rgba(255,255,255,.04); transition: .2s; }
+    .sites-grid tbody tr:last-child { border-bottom: none; }
+    .sites-grid tbody tr:hover { background: rgba(0,209,178,.04); }
+    .sites-grid td {
+      padding: 12px 14px; font-size: 12px; color: var(--text);
+    }
+    .sites-grid td:nth-child(2) { color: var(--teal); font-weight: 600; }
+    .sites-grid td:nth-child(3) { color: var(--accent); font-size: 11px; }
+
+    a.site-button {
+      background: linear-gradient(135deg, #00c49a, #0098a0);
+      color: #fff; padding: 6px 14px;
+      border-radius: 8px; text-decoration: none;
+      display: inline-block; font-size: 11px; font-weight: 700;
+      transition: .25s var(--r);
+      box-shadow: 0 3px 10px rgba(0,196,154,.25);
+    }
+    a.site-button:hover { transform: scale(1.06); box-shadow: 0 5px 16px rgba(0,196,154,.4); }
+
+    /* ── LINK BOX ── */
+    .link-box {
+      max-width: 500px; margin: 0 auto 16px;
+      padding: 0 10px; position: relative; z-index:1;
+    }
+    .link-box-inner {
+      text-align: center; padding: 22px 16px;
+      background: var(--surface);
+      border: 1px solid rgba(0,130,255,.2);
+      border-radius: 20px;
+      background-image: linear-gradient(135deg, rgba(0,210,255,.04), rgba(58,123,213,.06));
+    }
+    .link-box-inner p {
+      font-size: 13px; color: var(--green);
+      font-weight: 700; margin-bottom: 14px;
+      letter-spacing: .03em;
+    }
+    .visit-btn {
+      background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+      color: #fff; padding: 11px 28px;
+      border-radius: 60px; text-decoration: none;
+      font-weight: 700; font-size: 13px; display: inline-flex;
+      align-items: center; gap: 8px;
+      box-shadow: 0 6px 20px rgba(0,150,255,.25);
+      transition: .3s var(--r);
+    }
+    .visit-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,150,255,.4); }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      text-align: center; padding: 28px 16px;
+      background: rgba(6,18,31,.9);
+      border-top: 1px solid var(--border);
+      border-radius: 20px 20px 0 0;
+      margin-top: 10px;
+      position: relative; z-index:1;
+    }
+    .footer-logo {
+      font-size: 1.3rem; font-weight: 800;
+      background: linear-gradient(135deg, var(--teal2), var(--teal));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      margin-bottom: 6px;
+    }
+    .footer-contact {
+      font-size: 12px; color: var(--muted); margin-bottom: 12px;
+    }
+    .age-warning {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 1px solid rgba(255,59,92,.4);
+      color: var(--red); padding: 4px 14px;
+      border-radius: 8px; font-size: 11px; font-weight: 700;
+      background: rgba(255,59,92,.06);
+    }
+
+    /* ── FLOATING WA ── */
+    .wa-float {
+      position: fixed; width: 56px; height: 56px;
+      bottom: 24px; right: 18px;
+      background: #25d366; color: #fff;
+      border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 28px; z-index: 2000;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(37,211,102,.45);
+      animation: wa-pulse 2s infinite;
+    }
+    @keyframes wa-pulse {
+      0%   { box-shadow:0 0 0 0 rgba(37,211,102,.6); }
+      70%  { box-shadow:0 0 0 14px rgba(37,211,102,0); }
+      100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
+    }
+
+    /* ── REVEAL ── */
+    .reveal { opacity:0; transform:translateY(20px); transition: opacity .6s var(--r), transform .6s var(--r); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ── MOBILE ── */
+    @media(max-width:480px) {
+      .pro-header { margin: 8px 8px 0; padding: 10px 14px; }
+      .hero-banner { padding: 20px 12px 14px; }
+      .sites-grid thead th:nth-child(3) { display:none; }
+      .sites-grid td:nth-child(3) { display:none; }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="pro-header">
-        <div class="header-left">
-            <div class="profile-wrapper">
-                <img src="oxy2.png" alt="Operator">
-                <div class="live-status-dot"></div>
-            </div>
-            <div class="status-details">
-                <span class="op-title">🗣️Support</span>
-                <a href="https://wa.me/8801826444505" class="wa-link-top">
-                    <i class="fab fa-whatsapp"></i> 01826444505
-                </a>
-            </div>
-        </div>
-        <div class="header-right">
-            <img src="oxy1.png" alt="Oxy Club">
-        </div>
-    </header>
-
-    <div class="news-marquee">
-        <marquee behavior="scroll" direction="left" scrollamount="6">
-            🔥 Join BDT20, GameOn24, Goal90 – Oxy Club ✅ এক্টিভ থাকুন সব সাইটে একই ক্লাব 🔥 দ্রুত পেমেন্ট ও ২৪ ঘন্টা কাস্টমার সাপোর্ট 🔥
-        </marquee>
+<!-- HEADER -->
+<header class="pro-header">
+  <div class="header-left">
+    <div class="profile-wrapper">
+      <img src="oxy2.png" alt="Support" onerror="this.src='https://ui-avatars.com/api/?name=OX&background=0c1628&color=00d1b2&size=46'">
+      <div class="live-status-dot"></div>
     </div>
-
-    <div class="card-container">
-        <article class="bet-card">
-            <div class="card-header-row">
-                <div class="brand-logo"><img src="gl.jpg" alt="Goal90"></div>
-                <div class="rating-box"><span class="rating-num">Oxy Club join</span></div>
-            </div>
-            <span class="promo-badge">Sponsor: Oxy11</span>
-            <div class="details-row">
-                <div class="det-label">পেমেন্ট<span class="det-val">100%</span></div>
-                <div class="det-label">উইথড্র<span class="det-val">500-50k</span></div>
-                <div class="det-label">ডিপোজিট<span class="det-val">Unlimited</span></div>
-            </div>
-            <a href="https://goal90.live/" class="reg-btn">Live Goal90.live</a>
-        </article>
-
-        <article class="bet-card">
-            <div class="card-header-row">
-                <div class="brand-logo"><img src="gm.jpg" alt="Gameon24"></div>
-                <div class="rating-box"><span class="rating-num">Oxy Club join</span></div>
-            </div>
-            <span class="promo-badge">Sponsor: Oxy11</span>
-            <div class="details-row">
-                <div class="det-label">পেমেন্ট<span class="det-val">100%</span></div>
-                <div class="det-label">উইথড্র<span class="det-val">500-50k</span></div>
-                <div class="det-label">ডিপোজিট<span class="det-val">Unlimited</span></div>
-            </div>
-            <a href="https://gameon24.live/" class="reg-btn">Live Gameon24.live</a>
-        </article>
-
-        <article class="bet-card">
-            <div class="card-header-row">
-                <div class="brand-logo"><img src="bd.jpg" alt="Bdt20"></div>
-                <div class="rating-box"><span class="rating-num">Oxy Club join</span></div>
-            </div>
-            <span class="promo-badge">Sponsor: Oxy11</span>
-            <div class="details-row">
-                <div class="det-label">পেমেন্ট<span class="det-val">100%</span></div>
-                <div class="det-label">উইথড্র<span class="det-val">500-50k</span></div>
-                <div class="det-label">ডিপোজিট<span class="det-val">Unlimited</span></div>
-            </div>
-            <a href="https://bdt20.net/" class="reg-btn">Live Bdt20.Net</a>
-        </article>
+    <div class="status-details">
+      <span class="op-title">🎧 Support</span>
+      <a href="https://wa.me/8801826444505" class="wa-link-top">
+        <i class="fab fa-whatsapp"></i> 01826-444505
+      </a>
     </div>
-    
-<div id="site-list">
-  <!-- নতুন SEO-friendly টেবিল শুরু -->
-  <table>
-    <thead>
-      <tr>
-        <th>সাইটের নাম</th>
-        <th>ক্লাব</th>
-        <th>Sponsor</th>
-        <th>Join Now</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="সাইটের নাম">Goal90.live</td>
-        <td data-label="ক্লাব">Oxy Club</td>
-        <td data-label="Sponsor">Oxy11</td>
-        <td data-label="Join Now">
-          <a href="https://goal90.live" target="_blank" class="site-button" title="Join Goal90.live via Oxy Club">Join Now</a>
-        </td>
-      </tr>
-      <tr>
-        <td data-label="সাইটের নাম">Gameon24.com</td>
-        <td data-label="ক্লাব">Oxy Club</td>
-        <td data-label="Sponsor">Oxy11</td>
-        <td data-label="Join Now">
-          <a href="https://gameon24.com" target="_blank" class="site-button" title="Join Gameon24.com via Oxy Club">Join Now</a>
-        </td>
-      </tr>
-      <tr>
-        <td data-label="সাইটের নাম">Bdt20.net</td>
-        <td data-label="ক্লাব">Oxy Club</td>
-        <td data-label="Sponsor">Oxy11</td>
-        <td data-label="Join Now">
-          <a href="https://bdt20.net" target="_blank" class="site-button" title="Join Bdt20.net via Oxy Club">Join Now</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- নতুন টেবিল শেষ -->
+  </div>
+  <div class="header-right">
+    <img src="oxy1.png" alt="Oxy Club" onerror="this.style.display='none'">
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="news-marquee">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    🔥 Join BDT20, GameOn24, Goal90 – Oxy Club &nbsp;✅&nbsp; এক্টিভ থাকুন সব সাইটে একই ক্লাব &nbsp;🔥&nbsp; দ্রুত পেমেন্ট ও ২৪ ঘন্টা কাস্টমার সাপোর্ট &nbsp;🔥&nbsp;
+  </marquee>
 </div>
 
-    <div class="card-container">
-        <div class="link-box">
-            <p style="font-size:15px; color:#00ff88; margin-bottom: 10px; font-weight: bold;">
-                আমাদের নতুন অফিসিয়াল সাইট ভিজিট করুন:
-            </p>
-            <a href="https://bdworld.site" target="_blank" 
-               style="background: linear-gradient(90deg, #00d2ff, #3a7bd5); color: #fff; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 700; display: inline-block;">
-               Visit BDWorld.site
-            </a>
-        </div>
+<!-- HERO -->
+<div class="hero-banner">
+  <div class="hero-badge"><span></span> Bangladesh Trusted Club <span></span></div>
+  <h1>Oxy Club<br>এ স্বাগতম</h1>
+  <p>Goal90, Gameon24, Bdt20 — সব প্ল্যাটফর্ম এক ক্লাবে। দ্রুত পেমেন্ট, ২৪/৭ সাপোর্ট।</p>
+</div>
+
+<!-- CARDS -->
+<div class="card-container">
+
+  <article class="bet-card reveal">
+    <div class="card-glow-num">01</div>
+    <div class="card-header-row">
+      <div class="brand-logo"><img src="gl.jpg" alt="Goal90" onerror="this.parentElement.innerHTML='<span style=color:#00d1b2;font-weight:800;font-size:1.1rem>Goal90</span>'"></div>
+      <div class="rating-box">Oxy Club</div>
     </div>
+    <div class="promo-badge"><i class="fas fa-star"></i> Sponsor: Oxy11</div>
+    <div class="details-row">
+      <div class="det-item"><span class="det-label">পেমেন্ট</span><span class="det-val">100%</span></div>
+      <div class="det-item"><span class="det-label">উইথড্র</span><span class="det-val">500–50k</span></div>
+      <div class="det-item"><span class="det-label">ডিপোজিট</span><span class="det-val">Unlimited</span></div>
+    </div>
+    <a href="https://goal90.live/" class="reg-btn"><i class="fas fa-bolt"></i> Live Goal90.live</a>
+  </article>
 
-    <footer class="site-footer">
-        <div class="footer-title">Oxy Club join</div>
-        <div class="footer-contact">01826444505 imo Whatsapp</div>
-        <div class="age-warning">⚠️ make sure you're 18+</div>
-    </footer>
+  <article class="bet-card reveal">
+    <div class="card-glow-num">02</div>
+    <div class="card-header-row">
+      <div class="brand-logo"><img src="gm.jpg" alt="Gameon24" onerror="this.parentElement.innerHTML='<span style=color:#00d1b2;font-weight:800;font-size:1.1rem>Gameon24</span>'"></div>
+      <div class="rating-box">Oxy Club</div>
+    </div>
+    <div class="promo-badge"><i class="fas fa-star"></i> Sponsor: Oxy11</div>
+    <div class="details-row">
+      <div class="det-item"><span class="det-label">পেমেন্ট</span><span class="det-val">100%</span></div>
+      <div class="det-item"><span class="det-label">উইথড্র</span><span class="det-val">500–50k</span></div>
+      <div class="det-item"><span class="det-label">ডিপোজিট</span><span class="det-val">Unlimited</span></div>
+    </div>
+    <a href="https://gameon24.live/" class="reg-btn"><i class="fas fa-bolt"></i> Live Gameon24.live</a>
+  </article>
 
-    <a href="https://wa.me/8801826444505" class="wa-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+  <article class="bet-card reveal">
+    <div class="card-glow-num">03</div>
+    <div class="card-header-row">
+      <div class="brand-logo"><img src="bd.jpg" alt="Bdt20" onerror="this.parentElement.innerHTML='<span style=color:#00d1b2;font-weight:800;font-size:1.1rem>Bdt20</span>'"></div>
+      <div class="rating-box">Oxy Club</div>
+    </div>
+    <div class="promo-badge"><i class="fas fa-star"></i> Sponsor: Oxy11</div>
+    <div class="details-row">
+      <div class="det-item"><span class="det-label">পেমেন্ট</span><span class="det-val">100%</span></div>
+      <div class="det-item"><span class="det-label">উইথড্র</span><span class="det-val">500–50k</span></div>
+      <div class="det-item"><span class="det-label">ডিপোজিট</span><span class="det-val">Unlimited</span></div>
+    </div>
+    <a href="https://bdt20.net/" class="reg-btn"><i class="fas fa-bolt"></i> Live Bdt20.Net</a>
+  </article>
+
+</div>
+
+<!-- SITES TABLE -->
+<div class="sites-section reveal">
+  <p class="sites-title">✦ All Platforms ✦</p>
+  <div class="sites-grid" id="site-list">
+    <table>
+      <thead>
+        <tr>
+          <th>সাইট</th>
+          <th>ক্লাব</th>
+          <th>Sponsor</th>
+          <th>Join</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Goal90.live</td>
+          <td>Oxy Club</td>
+          <td>Oxy11</td>
+          <td><a href="https://goal90.live" target="_blank" class="site-button">Join Now</a></td>
+        </tr>
+        <tr>
+          <td>Gameon24.com</td>
+          <td>Oxy Club</td>
+          <td>Oxy11</td>
+          <td><a href="https://gameon24.com" target="_blank" class="site-button">Join Now</a></td>
+        </tr>
+        <tr>
+          <td>Bdt20.net</td>
+          <td>Oxy Club</td>
+          <td>Oxy11</td>
+          <td><a href="https://bdt20.net" target="_blank" class="site-button">Join Now</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- LINK BOX -->
+<div class="link-box reveal">
+  <div class="link-box-inner">
+    <p>🌐 আমাদের নতুন অফিসিয়াল সাইট ভিজিট করুন</p>
+    <a href="https://bdworld.site" target="_blank" class="visit-btn">
+      <i class="fas fa-globe"></i> Visit BDWorld.site
     </a>
+  </div>
+</div>
 
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">Oxy Club</div>
+  <div class="footer-contact"><i class="fab fa-whatsapp" style="color:#25d366"></i> 01826444505 · IMO · WhatsApp</div>
+  <div class="age-warning"><i class="fas fa-exclamation-triangle"></i> ১৮+ বছরের নিচে প্রযোজ্য নয়</div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/8801826444505" class="wa-float" target="_blank" title="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
